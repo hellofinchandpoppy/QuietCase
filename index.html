@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuietCase — Build your case for quiet.</title>
+<meta name="description" content="Document noise disturbances with timestamps, decibel readings, and audio evidence. Generate professional PDF reports for your landlord, HOA, or attorney.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=DM+Sans:wght@400;500;600&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #FAFAF8;
+    --surface: #FFFFFF;
+    --text: #1A1A1A;
+    --text-secondary: #5A5A58;
+    --accent: #5B4FCF;
+    --accent-hover: #4A3FB8;
+    --accent-light: #EEEDFE;
+    --border: #E8E8E4;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111110;
+      --surface: #1A1A18;
+      --text: #E8E8E4;
+      --text-secondary: #9A9A96;
+      --accent: #7B6FE8;
+      --accent-hover: #8D83F0;
+      --accent-light: #1E1D2E;
+      --border: #2A2A28;
+    }
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+    text-align: center;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    background: var(--accent);
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .icon svg { width: 40px; height: 40px; }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .app-store-badge {
+    display: inline-block;
+    margin-bottom: 3rem;
+  }
+  .app-store-badge img {
+    height: 54px;
+    border-radius: 12px;
+  }
+  .app-store-placeholder {
+    display: inline-block;
+    background: var(--text);
+    color: var(--bg);
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 3rem;
+    transition: opacity 0.2s;
+  }
+  .app-store-placeholder:hover { opacity: 0.85; }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+
+  .feature {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .feature-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--accent-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .feature h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .feature p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .legal-links {
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  .legal-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 12px;
+  }
+  .legal-links a:hover { color: var(--accent); text-decoration: underline; }
+
+  .copyright {
+    margin-top: 1rem;
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="icon">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 14v12M16 10v20M20 6v28M24 10v20M28 14v12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M8 30l24-20" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <h1>QuietCase</h1>
+  <p class="tagline">Document noise disturbances. Measure decibels. Generate professional reports. Build your case for quiet.</p>
+
+  <!-- Replace href with your actual App Store link once live -->
+  <a href="#" class="app-store-placeholder">Download on the App Store — $2.99</a>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">📋</div>
+      <div>
+        <h3>Log every incident</h3>
+        <p>Timestamp, noise type, severity, direction, and your own notes. One tap when you're losing sleep at 2 AM.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📊</div>
+      <div>
+        <h3>Measure the decibels</h3>
+        <p>Real-time dB readings from your phone's microphone. Record optional audio clips as evidence.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📄</div>
+      <div>
+        <h3>Export your case</h3>
+        <p>Generate a professional PDF report with every incident, quiet hours analysis, and dB statistics. Share it with your landlord, HOA, or attorney.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <div>
+        <h3>100% private</h3>
+        <p>No accounts. No cloud. No analytics. No tracking. Everything stays on your device.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="legal-links">
+    <a href="privacy">Privacy Policy</a>
+    <a href="terms">Terms of Use</a>
+    <a href="mailto:support@quietcase.app">Contact</a>
+  </div>
+
+  <p class="copyright">&copy; 2026 QuietCase. All rights reserved.</p>
+
+</div>
+</body>
+</html>
